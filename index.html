@@ -1,0 +1,270 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+   <head>
+     <title>Experiências Plataforma Salesforce</title>
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+   </head>
+   <body>
+      <div class="container">
+         <h1>Salesforce Developer Skills</h1>
+         <br>
+
+         <!-- Início Accordion -->
+	 <div id="accordion">
+
+	    <!-- Início Card Introdução -->
+	    <div class="card bg-dark text-white">
+	       <div class="card-header">
+	          <a class="card-link text-white" data-toggle="collapse" href="#introducao">
+                     <h5> Introdução </h5>
+		  </a>
+	       </div>
+	       <div id="introducao" class="collapse show" data-parent="#accordion">
+   	          <div class="card-body" >
+                     <p>
+                        Este documento visa demonstrar competências adquiridas na plataforma Salesforce como desenvolvedor, através da exposição 
+                        de implementações realizadas. O mesmo estará disponível como um link, no meu perfil do Linkedin, a quem possa interessar.
+                     </p>
+	          </div>
+               </div>
+	    </div>
+
+	    <!-- Fim Card Intodução -->
+
+	    <!-- Início Card Caso de Estudo -->
+	    <div class="card bg-dark text-white">
+	       <div class="card-header">
+	          <a class="card-link text-white" data-toggle="collapse" href="#casoEstudo">
+                     <h5> Caso de Estudo </h5>
+		  </a>
+	       </div>
+	       <div id="casoEstudo" class="collapse" data-parent="#accordion">
+   	          <div class="card-body" >
+                     <p>
+                        As implementações apresentadas correspondem a necessidades reais de uma confecção de artigos de vestuário para moda praia e ginástica.
+                     </p>
+                     <p>
+			Otimizações como controle e agilidade dos processos de negócio, adequação confortável ao calendário das estações de moda
+                        no que se refere a disponibilização de produtos no mercado em tempo hábil, posicionamento da marca no mercado, vendas online são 
+                        algumas das necessidades que o sistema proposto no Caso de Estudo visa atender.
+                     </p>
+	          </div>
+               </div>
+	    </div>
+
+	    <!-- Fim Card Caso de Estudo -->
+
+	    <!-- Início Cards Requisitos de Negócio -->
+	    <div class="card bg-dark text-white">
+
+	       <div class="card-header">
+	          <a class="card-link text-white" data-toggle="collapse" href="#requisitosNegocio">
+                     <h5> Requisitos de Negócio </h5>
+		  </a>
+	       </div>
+
+	       <div id="requisitosNegocio" class="collapse" data-parent="#accordion">
+
+                  <div class="card bg-dark">
+                     <div class="card-body">
+
+                        <!-- Início Accordion Lista de Requisitos -->
+                        <div id="listaRequisitos">
+
+                           <!-- Início Requisito Pesquisa Novo Modelo -->
+                           <div class="card bg-dark text-white">
+                              <div class="card-header">
+                                 <a class="card-link text-white" data-toggle="collapse" href="#pesquisaModelo">
+                                    <h6>Automatização dos Processos Para a Pesquisa de Novos Modelos</h6>
+                                 </a>
+                              </div>
+                              <div id="pesquisaModelo" class="collapse" data-parent="#listaRequisitos">
+                                 <div class="card-body">
+			            <table class="table table-secondary table-bordered">
+			               <thead>
+                                          <tr>
+                                             <th>Requisitos</th>
+                                             <th>Recursos da Plataforma</th>
+                                          </tr>
+		                       </thead>
+			               <tbody>
+                                          <tr>
+                                             <td>Agilizar o Processo de Pesquisa e Desenvolvimento de Novos Modelos Propostos</td>
+                                             <td>Implementação de Processo de Aprovação de Novos Modelos Propostos Por Pesquisadores de Moda</td>
+                                          </tr>
+                                          <tr>
+                                             <td>Iniciar, Automaticamente, a Etapa de Modelagem de Novos Modelos Aprovados</td>
+                                             <td>Atribuição Automática de Tarefa Para o Setor Modelagem Com Comunicação Por Email </td>
+                                          </tr>
+                                       </tbody>
+                                    </table> 	
+                                 </div>
+                              </div>
+                           </div>
+                           <!-- Fim Requisito Pesquisa de Novos Modelos -->
+
+                           <!-- Início Requisito Modelagem de Novos Modelos Aprovados-->
+                           <div class="card bg-dark text-white">
+                              <div class="card-header">
+                                 <a class="card-link text-white" data-toggle="collapse" href="#modelagem">
+                                    <h6>Automatização dos Processos de Modelagem</h6>
+                                 </a>
+                              </div>
+                              <div id="modelagem" class="collapse" data-parent="#listaRequisitos">
+                                 <div class="card-body">
+                                    <table class="table table-secondary table-bordered">
+                                       <thead>
+                                          <tr>
+                                            <th>Requisitos</th>
+                                            <th>Recursos da Plataforma</th>
+                                          </tr>
+                                       </thead>
+                                       <tbody>
+                                          <tr>
+                                             <td>Automatização do Processo de Desenvolvimento da Modelagem dos Modelos Aprovados</td>
+                                             <td>Formulário Para o Cadastramento dos Moldes Produzidos</td>
+                                          </tr>
+                                          <tr>
+                                             <td>Aprovação da Etapa de Modelagem</td>
+                                             <td>Implementação do Processo de Aprovação da Etapa de Modelagem</td>
+                                          </tr>
+                                          <tr>
+                                             <td>Registro de Informações Fundamentais da Etapa de Modelagem de Modelos</td>
+                                             <td>Registrar Gasto Médio Tecido</td>
+                                          </tr>
+                                          <tr>
+                                             <td>Iniciar, Automaticamente, a Etapa de Confecção da Peça-Piloto Resultante da Etapa de Modelagem</td>
+                                             <td>Atribuição Automática de Tarefa Para Setor de Pilotagem Com Comunicação Por Email </td>
+                                          </tr>
+                                       </tbody>
+                                    </table> 	
+                                 </div>
+                              </div>
+                           </div>
+                           <!-- Fim Requisito Modelagem de Novos Modelos Aprovados-->
+
+                           <!-- Início Requisito Pilotagem de Novos Modelos Aprovados-->
+                           <div class="card bg-dark text-white">
+                              <div class="card-header">
+                                 <a class="card-link text-white" data-toggle="collapse" href="#pilotagem">
+                                    <h6>Automatização dos Processos de Confecção de Peças-Piloto</h6>
+                                 </a>
+                              </div>
+                              <div id="pilotagem" class="collapse" data-parent="#listaRequisitos">
+                                 <div class="card-body">
+                                    <table class="table table-secondary table-bordered">
+                                       <thead>
+                                          <tr>
+                                             <th>Requisitos</th>
+                                             <th>Recursos da Plataforma</th>
+                                          </tr>
+                                       </thead>
+                                       <tbody>
+                                          <tr>
+                                            <td>Automatização do Processo de Desenvolvimento da Peça-Piloto de Modelagens Aprovadas</td>
+                                            <td>Formulário Para o Cadastramento das Operações de Costura em Sequência, Necessárias à Confecção da Peça-Piloto</td>
+                                          </tr>
+                                          <tr>
+                                             <td>Aprovação da Etapa de Pilotagem</td>
+                                             <td>Implementação do Processo de Aprovação da Etapa de Pilotagem</td>
+                                          </tr>
+                                          <tr>
+                                             <td>Registro de Informações Fundamentais da Etapa de Pilotagem</td>
+                                             <td>Registrar Custo Unitário de Costura e Metragem de Linha</td>
+                                          </tr>
+                                          <tr>
+                                             <td>Iniciar, Automaticamente, a Etapa de Cronometragem Para Confecção da Peça-Piloto</td>
+                                             <td>Atribuição Automática de Tarefa Para Setor de Cronometragem Com Comunicação Por Email </td>
+                                          </tr>
+                                       </tbody>
+                                    </table> 	
+                                 </div>
+                              </div>
+                           </div>
+                           <!-- Fim Requisito Pilotagem de Novos Modelos Aprovados-->
+
+                           <!-- Início Requisito Cronometragem de Peça-Piloto Aprovada-->
+                           <div class="card bg-dark text-white">
+                              <div class="card-header">
+                                 <a class="card-link text-white" data-toggle="collapse" href="#cronometragem">
+                                    <h6>Automatização dos Processos de Cronometragem</h6>
+                                 </a>
+                              </div>
+                              <div id="cronometragem" class="collapse" data-parent="#listaRequisitos">
+                                 <div class="card-body">
+                                    <table class="table table-secondary table-bordered">
+                                       <thead>
+                                          <tr>
+                                             <th>Requisitos</th>
+                                             <th>Recursos da Plataforma</th>
+                                          </tr>
+                                       </thead>
+                                       <tbody>
+                                          <tr>
+                                            <td>Automatização do Processo de Cronometragem de Peça-Piloto</td>
+                                            <td>Formulário Para o Cadastramento Cronometragem e Itens de Cronometragem</td>
+                                          </tr>
+
+                                          <tr>
+                                            <td>Cálculo do Tempo Padrão em Minutos, Necessários à Confecção de Uma Unidade do Modelo</td>
+                                            <td>Formulário Para o Cálculo do Tempo Padrão</td>
+                                          </tr>
+                                          <tr>
+                                             <td>Aprovação da Etapa de Cronometragem</td>
+                                             <td>Implementação do Processo de Aprovação da Etapa de Cronometragem</td>
+                                          </tr>
+                                          <tr>
+                                             <td>Iniciar, Automaticamente, a Etapa de Aprovação Final do Modelo</td>
+                                             <td>Atribuição Automática de Tarefa Para o Gerente de Design Com Comunicação Por Email </td>
+                                          </tr>
+                                       </tbody>
+                                    </table> 	
+                                 </div>
+                              </div>
+                           </div>
+                           <!-- Fim Requisito Cronometragem de Peça-Piloto Aprovada-->
+
+                      </div>
+                   </div>
+                </div>
+	    </div>
+
+	    <!-- Fim Cards Requisitos de Negócio -->
+
+	    <!--- Início Card Modelo de Dados -->
+	    <div class="card bg-dark text-white">
+	       <div class="card-header">
+	          <a class="card-link text-white" data-toggle="collapse" href="#modelodados">
+                     <h5> Modelo de Dados Proposto</h5>
+                  </a>
+	       </div>
+	       <div id="modelodados" class="collapse" data-parent="#accordion">
+                  <img class="card-image-top" src="ModeloDados.jpeg" alt="Modelo de Dados" style="width:1106px;height:700px;">
+	       </div>           
+	    </div>
+	    <!--- Fim Card Modelo de Dados -->
+
+	    <!--- Início Card Menu Principal dos Sistemas -->
+	    <div class="card bg-dark text-white">
+	       <div class="card-header">
+	          <a class="card-link text-white" data-toggle="collapse" href="#menuSistemas">
+                     <h5> Menu Principal de Sistemas</h5>
+                  </a>
+	       </div>
+	       <div id="menuSistemas" class="collapse" data-parent="#accordion">
+                  <img class="card-image-top" src="MenuPrincipal.png" alt="Menu Sistemas" style="width:1871px;height:906px;">
+	       </div>           
+	    </div>
+	    <!--- Fim Card Menu Principal de Sistemas -->
+
+         <!-- Fim Accordion -->
+	 </div>
+
+      </div>
+   </body>
+</html>
