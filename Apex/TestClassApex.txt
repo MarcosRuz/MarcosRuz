@@ -1,0 +1,144 @@
+@isTest
+ private class TestCargaRegsMaqOper {
+ 
+    // Testando a Inclusão em Máquina Operacional Sem Duplicidade de Operação Costura e Máquina Inventário
+    
+    @isTest
+    static void testCargaCompleta() {
+    
+       // Definindo os Valores Para as Ocorrências de Registros
+       
+       Integer occur_operacaoCostura; 
+       Integer occur_maquinaInventario;
+       Integer occur_aparelhoInventario;
+       
+       occur_operacaoCostura    = 3;
+       occur_maquinaInventario  = 2;
+       occur_aparelhoInventario = 2;
+       
+       // Carga dos Registros
+       
+       CargaRegsTestMaqOper.maqOperWithoutDup ( occur_operacaoCostura, 
+                                                occur_maquinaInventario, 
+                                                occur_aparelhoInventario );
+                                                
+       // Resultado do Teste
+                                                
+       Integer count = [ SELECT COUNT() FROM Maquina_Operacional__c ];
+       Integer regs  = occur_operacaoCostura * occur_maquinaInventario * occur_aparelhoInventario;
+       
+       System.debug ( 'Total Carga Esperada = ' + regs );
+       System.debug ( 'Total Carregado = ' + count );
+       
+       System.assertEquals ( count, regs );
+    }
+    
+    // Testando a Inclusão em Máquina Operacional Com Duplicidade de Operação Costura e Máquina Inventário
+    
+    @isTest
+    static void testDupIncMaqOper() {
+    
+       // Definindo os Valores Para as Ocorrências de Registros
+       
+       Integer occur_operacaoCostura; 
+       Integer occur_maquinaInventario;
+       Integer occur_aparelhoInventario;
+       
+       occur_operacaoCostura    = 3;
+       occur_maquinaInventario  = 2;
+       occur_aparelhoInventario = 2;
+       
+       // Carga dos Registros
+       
+       CargaRegsTestMaqOper.maqOperWithoutDup ( occur_operacaoCostura, 
+                                                occur_maquinaInventario,
+                                                occur_aparelhoInventario );
+       
+       // Recuperando a Operação Costura, Máquina Inventário e Aparelho Inventário Incluídos
+       
+       List<Operacao_Costura__c> operCostura        = [ SELECT Id FROM Operacao_Costura__c LIMIT 1 ];  
+       
+       List<Maquina_Inventario__c> maqInventario    = [ SELECT Id FROM Maquina_Inventario__c LIMIT 1 ];
+       
+       List<Aparelho_Inventario__c> aparInventario  = [ SELECT Id FROM Aparelho_Inventario__c LIMIT 1 ];  
+       
+       // Definindo a Ocorrência da Máquina Operacional Com Duplicidade
+       
+       Maquina_Operacional__c dupMaqOper =  new Maquina_Operacional__c();
+       
+       dupMaqOper.Name                   = 'Nome Maquina Operacional Com Duplicidade';
+       dupMaqOper.Funcao__c              = 'Função Máquina Operacional Com Duplicidade';
+       dupMaqOper.Operacao_Costura__c    = operCostura[0].Id;
+       dupMaqOper.Maquina_Inventario__c  = maqInventario[0].Id;
+       dupMaqOper.Aparelho_Inventario__c = aparInventario[0].Id;
+       
+       // Msgs Erro Esperada e Retornada
+       
+       String msgEsperada  = 'Configuração Máquina Operacional Já Existente. ' +
+                             'Inclusão Não Permitida.';
+       String msgRetornada = '';
+       
+       try {
+           insert(dupMaqOper);
+           } catch ( DmlException e ) {
+             System.debug ( 'Erro Duplicidade Maquina Operacional. Msg : ' + e.getMessage() );
+             msgRetornada = e.getMessage();
+             System.assertEquals ( e.getMessage().contains(msgEsperada), True );
+       }
+    }
+    
+    // Testando a Alteração em Máquina Operacional Com Duplicidade de Operação Costura e Máquina Inventário
+    
+    @isTest
+    static void testDupAltMaqOper() {
+    
+       // Definindo os Valores Para as Ocorrências de Registros
+       
+       Integer occur_operacaoCostura; 
+       Integer occur_maquinaInventario;
+       Integer occur_aparelhoInventario;
+       
+       occur_operacaoCostura    = 3;
+       occur_maquinaInventario  = 2;
+       occur_aparelhoInventario = 2;
+       
+       // Carga dos Registros
+       
+       CargaRegsTestMaqOper.maqOperWithoutDup ( occur_operacaoCostura, 
+                                                occur_maquinaInventario,
+                                                occur_aparelhoInventario );
+       
+       // Recuperando 2 Ocorrências de Máquina Operacional
+       
+       List<Maquina_Operacional__c> maqOperacionais  = [ SELECT Id,
+                                                                Operacao_Costura__c,
+                                                                Maquina_Inventario__c,
+                                                                Aparelho_Inventario__c 
+                                                         FROM   Maquina_Operacional__c 
+                                                         LIMIT 2 ];  
+       
+       // Definindo a Ocorrência da Máquina Operacional Com Duplicidade
+       
+       Maquina_Operacional__c dupMaqOper =  new Maquina_Operacional__c();
+       
+       // Alterando Operação Costura e Máquina Inventário Provocando Duplicidade 
+
+       dupMaqOper                        = maqOperacionais[1];
+       dupMaqOper.Maquina_Inventario__c  = maqOperacionais[0].Maquina_Inventario__c;
+       dupMaqOper.Aparelho_Inventario__c = maqOperacionais[0].Aparelho_Inventario__c;       
+       
+       // Msgs Erro Esperada e Retornada
+       
+       String msgEsperada  = 'Configuração Máquina Operacional Já Existente. ' +
+                             'Alteração Não Permitida.';
+       String msgRetornada = '';
+       
+       try {
+           update(dupMaqOper);
+           } catch ( DmlException e ) {
+             System.debug ( 'Erro Duplicidade Maquina Operacional. Msg : ' + e.getMessage() );
+             msgRetornada = e.getMessage();
+             System.assertEquals ( e.getMessage().contains(msgEsperada), True );
+       }
+    }
+ }

@@ -1,0 +1,43 @@
+﻿D:\New\Force.com\Treinamento\Lwc\MeusProjetos\lemarrio>sfdx force:org:list
+WARNING: apiVersion configuration overridden at "45.0"
+=== Orgs
+     ALIAS        USERNAME                        ORG ID              CONNECTED STATUS
+───  ───────────  ──────────────────────────────  ──────────────────  ────────────────
+(D)  LemarBySoft  marcosruztreinamento@gmail.com  00D0a0000027Xz7EAE  Connected
+     MyDevHub     marcosruz@lemarrio.com          00D4x0000016eBHEAY  Unknown
+
+     ALIAS            USERNAME                       ORG ID              EXPIRATION DATE
+───  ───────────────  ─────────────────────────────  ──────────────────  ───────────────
+(U)  LemarRioScratch  test-1ikj4wh7km1v@example.com  00D63000000IcMDEA0  2021-02-24
+
+D:\New\Force.com\Treinamento\Lwc\MeusProjetos\lemarrio>sfdx force:org:list > d:/new/force.com/documentação/linkedin/SfdxDevScratchOrgs.txt
+WARNING: apiVersion configuration overridden at "45.0"
+
+D:\New\Force.com\Treinamento\Lwc\MeusProjetos\lemarrio>sfdx force:org:display
+WARNING: apiVersion configuration overridden at "45.0"
+=== Org Description
+KEY              VALUE
+───────────────  ────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+Access Token     00D63000000IcMD!AQwAQL14VdKI6WHEfGEFh9s1sFr24m01tUs9FuHw.AnDbHR09wkd.gmY4pqwhMMwRnPIiupN45rixfer0d.PlTAnLwNH273Z
+Alias            LemarRioScratch
+Client Id        PlatformCLI
+Created By       marcosruztreinamento@gmail.com
+Created Date     2021-02-17T15:30:25.000+0000
+Dev Hub Id       marcosruztreinamento@gmail.com
+Edition          Developer
+Expiration Date  2021-02-24
+Id               00D63000000IcMDEA0
+Instance Url     https://ruby-drive-9724-dev-ed.cs43.my.salesforce.com
+Org Name         LemarRio Scratch Org
+Status           Active
+Username         test-1ikj4wh7km1v@example.com
+
+D:\New\Force.com\Treinamento\Lwc\MeusProjetos\lemarrio>sfdx force:source:status
+WARNING: apiVersion configuration overridden at "45.0"
+=== Source Status
+STATE           FULL NAME                       TYPE       PROJECT PATH
+──────────────  ──────────────────────────────  ─────────  ───────────────────────────────────────────────────────────────────────────────────
+Remote Changed  Lightning_Page_Pesquisa_Modelo  CustomTab  force-app\main\default\tabs\Lightning_Page_Pesquisa_Modelo.tab-meta.xml
+Remote Changed  Lightning_Page_Pesquisa_Modelo  FlexiPage  force-app\main\default\flexipages\Lightning_Page_Pesquisa_Modelo.flexipage-meta.xml
+
+D:\New\Force.com\Treinamento\Lwc\MeusProjetos\lemarrio>
