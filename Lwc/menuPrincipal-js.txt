@@ -1,0 +1,67 @@
+﻿import { LightningElement } from 'lwc';
+
+
+import PROJETO_IMAGE from '@salesforce/resourceUrl/Projetos';
+
+import DESIGN_IMAGE from '@salesforce/resourceUrl/Design';
+
+import MODELAGEM_IMAGE from '@salesforce/resourceUrl/Modelagem';
+
+import CORTE_IMAGE from '@salesforce/resourceUrl/Corte';
+
+import CONFECCAO_IMAGE from '@salesforce/resourceUrl/Confeccao';
+
+import FOTOGRAFIA_IMAGE from '@salesforce/resourceUrl/Fotografia';
+
+import COMPRAS_IMAGE from '@salesforce/resourceUrl/Compras';
+
+import VENDAS_IMAGE from '@salesforce/resourceUrl/Vendas';
+
+import FINANCAS_IMAGE from '@salesforce/resourceUrl/Financas';
+
+import SUPORTE_IMAGE from '@salesforce/resourceUrl/Suporte';
+
+
+export default class MenuPrincipal extends LightningElement {
+
+   get projeto() {
+       return PROJETO_IMAGE;
+   }
+
+   get design() {
+       return DESIGN_IMAGE;
+   }
+
+   get modelagem() {
+       return MODELAGEM_IMAGE;
+   }
+
+   get corte() {
+       return CORTE_IMAGE;
+   }
+
+   get confeccao() {
+       return CONFECCAO_IMAGE;
+   }
+
+   get fotografia() {
+       return FOTOGRAFIA_IMAGE;
+   }
+
+   get compras() {
+       return COMPRAS_IMAGE;
+   }
+
+   get vendas() {
+       return VENDAS_IMAGE;
+   }
+
+   get financas() {
+       return FINANCAS_IMAGE;
+   }
+
+   get suporte() {
+       return SUPORTE_IMAGE;
+   }
+
+}

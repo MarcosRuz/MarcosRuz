@@ -1,0 +1,82 @@
+﻿@isTest
+public class CargaRegsTestMaqOper {
+    public static void maqOperWithoutDup ( Integer occur_OperacaoCostura,
+                                           Integer occur_MaquinaInventario,
+                                           Integer occur_AparelhoInventario ) {
+       // Listas Para os Registros de Teste
+       
+       List <Operacao_Costura__c> operCostura       = new List<Operacao_Costura__c>();
+       List <Maquina_Inventario__c> maqInventario   = new List<Maquina_Inventario__c>();
+       List <Aparelho_Inventario__c> aparInventario = new List<Aparelho_Inventario__c>();
+       List <Maquina_Operacional__c> maqOperacional = new List<Maquina_Operacional__c>();
+       
+       // Carga dos Registros de Operação Costura
+       
+       for ( Integer i=0; i < occur_OperacaoCostura; i++ ) {
+           Operacao_Costura__c oc = new Operacao_Costura__c();
+           oc.Name             = 'Operação Costura ' + i;
+           oc.Tipo_Operacao__c = 'Mecanizada';
+           oc.Descricao__c     = 'Descrição Operação ' + i;
+           operCostura.add(oc);
+       }
+       
+       try {
+         insert operCostura;
+       } catch ( DmlException e ) {
+         System.debug ( e.getMessage() );
+       }
+       
+       // Carga Dos Registros de Máquina Inventário
+       
+       for ( Integer j=0; j < occur_MaquinaInventario; j++ ) {
+           Maquina_Inventario__c mi = new Maquina_Inventario__c();
+           mi.Maquina__c         = 'Colarete';
+           mi.Modelo__c          = 'Modelo Maquina ' + j;
+           mi.Fabricante__c      = 'Fabricante Máquina ' + j;
+           mi.Caracteristicas__c = 'Caracteristicas Maquina ' + j;
+           mi.Descricao__c       = 'Descrição Maquina ' + j;
+           maqInventario.add(mi);
+       }
+       
+       try {
+         insert maqInventario;
+       } catch ( DmlException e ) {
+         System.debug ( e.getMessage() );
+       }
+       
+       for ( Integer k=0; k < occur_AparelhoInventario; k++ ) {
+           Aparelho_Inventario__c ai = new Aparelho_Inventario__c();
+           ai.Aparelho__c        = 'Viés';
+           ai.Caracteristicas__c = 'Caracteristicas Apareho ' + k;
+           ai.Descricao__c       = 'Descricao Aparelho ' + k;
+           aparInventario.add(ai);
+       }
+       
+       try {
+         insert aparInventario;
+       } catch ( DmlException e ) {
+         System.debug ( e.getMessage() );
+       }
+       
+       // Carga Dos Registros de Máquina Operacional
+       
+       for ( Integer i=0; i < occur_OperacaoCostura; i++ ) {
+           for ( Integer j=0; j < occur_MaquinaInventario; j++ ) {
+               for (Integer k=0; k < occur_MaquinaInventario; k++ ) {
+                   Maquina_Operacional__c mo = new Maquina_Operacional__c();
+                   mo.Name = 'Maq Oper ' + 'Oper Costura = ' + i + ' Maq Invent = ' + j + ' Apar Invent = ' + k;
+                   mo.Funcao__c = 'Função Máquina Operacional';
+                   mo.Operacao_Costura__c = operCostura[i].Id;
+                   mo.Maquina_Inventario__c = maqInventario[j].Id;
+                   mo.Aparelho_Inventario__c = aparInventario[k].Id;
+                   maqOperacional.add(mo);
+               }
+           }
+       }
+       try {
+           insert maqOperacional;
+       }   catch ( DmlException e ) {
+           System.debug ( e.getMessage() );
+       }
+    }
+ }

@@ -1,0 +1,115 @@
+﻿<template>
+
+
+      <div class="slds-grid slds-gutters slds-grid_align-space slds-m-around_medium">
+
+         <!--- Inicio Projetos -->
+         <div class="slds-col slds-size_1-of-3">
+            <lightning-card title="Projetos de Negócio de Moda">
+               <div slot="actions">
+                  <lightning-button variant="brand" label="Projetos"></lightning-button>
+               </div>
+               <img class="imagem" src={projeto} alt="Projetos">
+            </lightning-card>
+         </div>
+         <!--- Fim Projetos -->
+
+         <!--- Inicio Design Moda -->
+         <div class="slds-col slds-size_1-of-3">
+            <lightning-card title="Design de Moda">
+               <div slot="actions">
+                  <lightning-button variant="brand" label="Design"></lightning-button>
+               </div>
+               <img class="imagem" src={design} alt="Design">
+            </lightning-card>
+         </div>
+         <!--- Fim Design Moda -->
+
+         <!--- Inicio Modelos -->
+         <div class="slds-col slds-size_1-of-3">
+            <lightning-card title="Modelos">
+               <div slot="actions">
+                  <lightning-button variant="brand" label="Modelos"></lightning-button>
+               </div>
+               <img class="imagem" src={modelagem} alt="Modelos">
+            </lightning-card>
+         </div>
+         <!--- Fim Modlos -->
+
+      </div>
+
+      <div class="slds-grid slds-gutters slds-grid_align-space slds-m-around_medium">
+
+         <!--- Inicio Corte -->
+         <div class="slds-col slds-size_1-of-3">
+            <lightning-card title="Planejamento de Risco e Corte">
+               <div slot="actions">
+                  <lightning-button variant="brand" label="Corte"></lightning-button>
+               </div>
+               <img class="imagem" src={corte} alt="Corte">
+            </lightning-card>
+         </div>
+         <!--- Fim Corte -->
+
+         <!--- Inicio Confeccao -->
+         <div class="slds-col slds-size_1-of-3">
+            <lightning-card title="Confecção de Vestuário">
+               <div slot="actions">
+                  <lightning-button variant="brand" label="Confecção"></lightning-button>
+               </div>
+               <img class="imagem" src={confeccao} alt="Confecção">
+            </lightning-card>
+         </div>
+         <!--- Fim Confeccao -->
+
+         <!--- Inicio Fotografia -->
+         <div class="slds-col slds-size_1-of-3">
+            <lightning-card title="Fotografia de Moda">
+               <div slot="actions">
+                  <lightning-button variant="brand" label="Fotografia"></lightning-button>
+               </div>
+               <img class="imagem" src={fotografia} alt="Fotografia">
+            </lightning-card>
+         </div>
+         <!--- Fim Fotografia -->
+
+      </div>
+
+      <div class="slds-grid slds-gutters slds-grid_align-space slds-m-around_medium">
+
+         <!--- Inicio Compras -->
+         <div class="slds-col slds-size_1-of-3">
+            <lightning-card title="Orçamentos, Pedidos e Compras">
+               <div slot="actions">
+                  <lightning-button variant="brand" label="Compras"></lightning-button>
+               </div>
+               <img class="imagem" src={compras} alt="Compras">
+            </lightning-card>
+         </div>
+         <!--- Fim Compras -->
+
+         <!--- Inicio Marketing -->
+         <div class="slds-col slds-size_1-of-3">
+            <lightning-card title="Marketing e Gestão de Vendas">
+               <div slot="actions">
+                  <lightning-button variant="brand" label="Vendas"></lightning-button>
+               </div>
+               <img class="imagem" src={vendas} alt="Vendas">
+            </lightning-card>
+         </div>
+         <!--- Fim Marketing -->
+
+         <!--- Inicio Finacas -->
+         <div class="slds-col slds-size_1-of-3">
+            <lightning-card title="Gestão Financeira">
+               <div slot="actions">
+                  <lightning-button variant="brand" label="Finanças"></lightning-button>
+               </div>
+               <img class="imagem" src={financas} alt="Finanças">
+            </lightning-card>
+         </div>
+         <!--- Fim Financas -->
+
+      </div>
+
+</template>
