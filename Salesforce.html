@@ -307,52 +307,99 @@
                      <div class="card-body">
                         <!-- Início Accordion Campos e Relacionamentos -->
                         <div id="fieldsRelationship">
-                           <!-- Início Page Layout Objeto Coleção -->
                            <div class="card bg-dark text-white">
                               <div class="card-header">
-                                 <a class="card-link text-white" href="Lightning/FieldsRelationship.mhtml">
+                                 <a class="card-link text-white" data-toggle="collapse" href="#camposRelac">
                                     <h6>Campos e Relacionamentos</h6>
                                  </a>
                               </div>
-                           </div>
-                        </div>         
-                        <!-- Fim Accordion Campos e Relacionamentos -->
-                        <!-- Início Accordion Page Layout -->
-                        <div id="pageLayout">
-                           <!-- Início Page Layout Objeto Coleção -->
-                           <div class="card bg-dark text-white">
-                              <div class="card-header">
-                                 <a class="card-link text-white" href="Lightning/ColecaoPageLayout.mhtml">
-                                    <h6>Page Layout</h6>
-                                 </a>
+                              <div id="camposRelac" class="collapse" data-parent="#implLightning">
+                                 <div class="card-body">
+                                    <div class="container">
+                                       <img class="card-image-top" src="Lightning/FieldsRelationship.jpg" alt="Campos e Relacionamentos" 
+                                            style="width:1020px;height:700px;">
+                                    </div>
+                                 </div>
                               </div>
                            </div>
-                        </div>         
-                        <!-- Fim Accordion Page Layout -->
-                        <!-- Início Accordion Regras de Validação -->
-                        <div id="validation">
-                           <!-- Início Page Layout Objeto Coleção -->
+                        </div>   
+                        <!-- Fim Accordion Campos e Relacionamentos -->
+                        <!-- Início Accordion Layout de Pagina -->
+                        <div id="pageLayout">
                            <div class="card bg-dark text-white">
                               <div class="card-header">
-                                 <a class="card-link text-white" href="Lightning/ValidationRules.mhtml">
+                                 <a class="card-link text-white" data-toggle="collapse" href="#layoutPagina">
+                                    <h6>Layout de Página</h6>
+                                 </a>
+                              </div>
+                              <div id="layoutPagina" class="collapse" data-parent="#implLightning">
+                                 <div class="card-body">
+                                    <div class="container">
+                                       <img class="card-image-top" src="Lightning/ColecaoPageLayout.jpg" alt="Layout de Pagina" 
+                                            style="width:1020px;height:700px;">
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>   
+                        <!-- Fim Accordion Layout de Pagina -->
+                        <!-- Início Accordion Regras de Validacao -->
+                        <div id="validationRules">
+                           <div class="card bg-dark text-white">
+                              <div class="card-header">
+                                 <a class="card-link text-white" data-toggle="collapse" href="#regrasValidacao">
                                     <h6>Regras de Validação</h6>
                                  </a>
                               </div>
-                           </div>
-                        </div>         
-                        <!-- Fim Accordion Regras de Validação -->
-                        <!-- Início Accordion Tipos de Registro -->
-                        <div id="recordType">
-                           <!-- Início Page Layout Objeto Coleção -->
-                           <div class="card bg-dark text-white">
-                              <div class="card-header">
-                                 <a class="card-link text-white" href="Lightning/RecordType.mhtml">
-                                    <h6>Tipos de Registros</h6>
-                                 </a>
+                              <div id="regrasValidacao" class="collapse" data-parent="#implLightning">
+                                 <div class="card-body">
+                                    <div class="container">
+                                       <img class="card-image-top" src="Lightning/ValidationRules.jpg" alt="Regras Validacao" 
+                                            style="width:1020px;height:700px;">
+                                    </div>
+                                 </div>
                               </div>
                            </div>
-                        </div>         
-                        <!-- Fim Accordion Tipos de Registro -->
+                        </div>   
+                        <!-- Fim Accordion Layout de Pagina -->
+                        <!-- Início Accordion Tipo de Registro -->
+                        <div id="recordType">
+                           <div class="card bg-dark text-white">
+                              <div class="card-header">
+                                 <a class="card-link text-white" data-toggle="collapse" href="#tipoRegistro">
+                                    <h6>Tipo de Registro</h6>
+                                 </a>
+                              </div>
+                              <div id="tipoRegistro" class="collapse" data-parent="#implLightning">
+                                 <div class="card-body">
+                                    <div class="container">
+                                       <img class="card-image-top" src="Lightning/RecordType.jpg" alt="Regras Validacao" 
+                                            style="width:1020px;height:700px;">
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>   
+                        <!-- Fim Accordion Tipo de Registro -->
+                        <!-- Início Accordion Regras de Fluxo de Trabalho -->
+                        <div id="workflowRules">
+                           <div class="card bg-dark text-white">
+                              <div class="card-header">
+                                 <a class="card-link text-white" data-toggle="collapse" href="#regrasFluxo">
+                                    <h6>Regras de Fluxo de Trabalho</h6>
+                                 </a>
+                              </div>
+                              <div id="regrasFluxo" class="collapse" data-parent="#implLightning">
+                                 <div class="card-body">
+                                    <div class="container">
+                                       <img class="card-image-top" src="Lightning/WorkflowRules.jpg" alt="Regras Fluxo Trabalho" 
+                                            style="width:1020px;height:700px;">
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>   
+                        <!-- Fim Accordion Regras de Fluxo de Trabalho -->
                      </div>
                   </div>      
                </div>   
@@ -431,7 +478,7 @@
                                     <h6>Arquivos Html, Javascript e Metadata</h6>
                                  </a>
                               </div>
-                              <div id="arqsHtmlJsMeta" class="collapse" data-parent="#arqslwc">
+                              <div id="arqsHtmlJsMeta" class="collapse" data-parent="#lwc">
                                  <div class="card-body">
                                     <iframe src="Lwc/menuPrincipal-html.txt" class="bg-light w-100" title="Html Menu Principal"></iframe>
                                     <br>
@@ -444,16 +491,24 @@
                         </div>
                         <!-- Fim Arquivos lwc menuPrincipal -->
                         <!-- Início Tela App menuPrincipal -->
-                        <div id="telalwc">
+                        <div id="appMenuPrinc">
                            <div class="card bg-dark text-white">
                               <div class="card-header">
-                                 <a class="card-link text-white" href="Lwc/MenuPrincipal.mhtml">
+                                 <a class="card-link text-white" data-toggle="collapse" href="#saidaApp">
                                     <h6>Saída App</h6>
                                  </a>
                               </div>
+                              <div id="saidaApp" class="collapse" data-parent="#lwc">
+                                 <div class="card-body">
+                                    <div class="container">
+                                       <img class="card-image-top" src="Lwc/MenuPrincipal.jpg" alt="Saida App Menu Principal" 
+                                            style="width:1020px;height:700px;">
+                                    </div>
+                                 </div>
+                              </div>
                            </div>
-                        </div>
-                        <!-- Fim Arquivos lwc menuPrincipal -->
+                        </div>   
+                        <!-- Fim Tela App menuPrincipal -->
                      </div>
                   </div>               
                </div>   

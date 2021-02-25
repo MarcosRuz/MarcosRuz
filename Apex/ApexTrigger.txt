@@ -1,5 +1,5 @@
-// Operação Costura e Máquina Inventário Precisa Ter Apenas 1 Ocorrência em Máquina Operacional
-// Impede Duplicidade de Desta Configuração nas Ações de Inclusão e Alteração de Uma Máquina Operacional
+// Operacao Costura e Maquina Inventario Precisam Ter Apenas 1 Ocorrencia em Maquina Operacional
+// Impede Duplicidade de Desta Configuracao nas Acoes de Inclusao e Alteracao de Uma Maquina Operacional
 
 trigger DuplicidadeMaquinaOperacional on Maquina_Operacional__c ( before insert, before update ) {
      for ( Maquina_Operacional__c mo : Trigger.new ) {
@@ -9,16 +9,16 @@ trigger DuplicidadeMaquinaOperacional on Maquina_Operacional__c ( before insert,
                        AND    Maquina_Inventario__c = :mo.Maquina_inventario__c ];
          if ( Trigger.isInsert ) {                              
             if ( i > 0 ) {
-               mo.Operacao_Costura__c.addError ('Configuração Máquina '      +
-                                                'Operacional Já Existente. ' +
-                                                'Inclusão Não Permitida.'  );
+               mo.Operacao_Costura__c.addError ('Configuracao Maquina '      +
+                                                'Operacional Ja Existente. ' +
+                                                'Inclusao Nao Permitida.'  );
             }
          }
          if ( Trigger.isUpdate ) {                              
             if ( i > 1 ) {
-               mo.Operacao_Costura__c.addError ('Configuração Máquina '      +
-                                                'Operacional Já Existente. ' +
-                                                'Alteração Não Permitida.' );
+               mo.Operacao_Costura__c.addError ('Configuracao Maquina '      +
+                                                'Operacional Ja Existente. ' +
+                                                'Alteracao Nao Permitida.' );
             }
          }
      }

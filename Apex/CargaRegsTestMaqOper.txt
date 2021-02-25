@@ -14,9 +14,9 @@ public class CargaRegsTestMaqOper {
        
        for ( Integer i=0; i < occur_OperacaoCostura; i++ ) {
            Operacao_Costura__c oc = new Operacao_Costura__c();
-           oc.Name             = 'Operação Costura ' + i;
+           oc.Name             = 'Operacao Costura ' + i;
            oc.Tipo_Operacao__c = 'Mecanizada';
-           oc.Descricao__c     = 'Descrição Operação ' + i;
+           oc.Descricao__c     = 'Descricao Operacao ' + i;
            operCostura.add(oc);
        }
        
@@ -32,9 +32,9 @@ public class CargaRegsTestMaqOper {
            Maquina_Inventario__c mi = new Maquina_Inventario__c();
            mi.Maquina__c         = 'Colarete';
            mi.Modelo__c          = 'Modelo Maquina ' + j;
-           mi.Fabricante__c      = 'Fabricante Máquina ' + j;
+           mi.Fabricante__c      = 'Fabricante Maquina ' + j;
            mi.Caracteristicas__c = 'Caracteristicas Maquina ' + j;
-           mi.Descricao__c       = 'Descrição Maquina ' + j;
+           mi.Descricao__c       = 'Descricao Maquina ' + j;
            maqInventario.add(mi);
        }
        

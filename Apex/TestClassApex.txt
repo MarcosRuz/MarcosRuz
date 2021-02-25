@@ -1,12 +1,12 @@
 @isTest
  private class TestCargaRegsMaqOper {
  
-    // Testando a Inclusão em Máquina Operacional Sem Duplicidade de Operação Costura e Máquina Inventário
+    // Testando a Inclusao em Maquina Operacional Sem Duplicidade de Operacao Costura e Maquina Inventario
     
     @isTest
     static void testCargaCompleta() {
     
-       // Definindo os Valores Para as Ocorrências de Registros
+       // Definindo os Valores Para as Ocorrencias de Registros
        
        Integer occur_operacaoCostura; 
        Integer occur_maquinaInventario;
@@ -33,12 +33,12 @@
        System.assertEquals ( count, regs );
     }
     
-    // Testando a Inclusão em Máquina Operacional Com Duplicidade de Operação Costura e Máquina Inventário
+    // Testando a Inclusao em Maquina Operacional Com Duplicidade de Operacao Costura e Maquina Inventario
     
     @isTest
     static void testDupIncMaqOper() {
     
-       // Definindo os Valores Para as Ocorrências de Registros
+       // Definindo os Valores Para as Ocorrencias de Registros
        
        Integer occur_operacaoCostura; 
        Integer occur_maquinaInventario;
@@ -54,7 +54,7 @@
                                                 occur_maquinaInventario,
                                                 occur_aparelhoInventario );
        
-       // Recuperando a Operação Costura, Máquina Inventário e Aparelho Inventário Incluídos
+       // Recuperando a Operacao Costura, Maquina Inventario e Aparelho Inventario Incluidos
        
        List<Operacao_Costura__c> operCostura        = [ SELECT Id FROM Operacao_Costura__c LIMIT 1 ];  
        
@@ -62,20 +62,20 @@
        
        List<Aparelho_Inventario__c> aparInventario  = [ SELECT Id FROM Aparelho_Inventario__c LIMIT 1 ];  
        
-       // Definindo a Ocorrência da Máquina Operacional Com Duplicidade
+       // Definindo a Ocorrencia da Maquina Operacional Com Duplicidade
        
        Maquina_Operacional__c dupMaqOper =  new Maquina_Operacional__c();
        
        dupMaqOper.Name                   = 'Nome Maquina Operacional Com Duplicidade';
-       dupMaqOper.Funcao__c              = 'Função Máquina Operacional Com Duplicidade';
+       dupMaqOper.Funcao__c              = 'Funcao Maquina Operacional Com Duplicidade';
        dupMaqOper.Operacao_Costura__c    = operCostura[0].Id;
        dupMaqOper.Maquina_Inventario__c  = maqInventario[0].Id;
        dupMaqOper.Aparelho_Inventario__c = aparInventario[0].Id;
        
        // Msgs Erro Esperada e Retornada
        
-       String msgEsperada  = 'Configuração Máquina Operacional Já Existente. ' +
-                             'Inclusão Não Permitida.';
+       String msgEsperada  = 'Configuracao Maquina Operacional Ja Existente. ' +
+                             'Inclusao Nao Permitida.';
        String msgRetornada = '';
        
        try {
@@ -87,12 +87,12 @@
        }
     }
     
-    // Testando a Alteração em Máquina Operacional Com Duplicidade de Operação Costura e Máquina Inventário
+    // Testando a Alteracao em Maquina Operacional Com Duplicidade de Operacao Costura e Maquina Inventario
     
     @isTest
     static void testDupAltMaqOper() {
     
-       // Definindo os Valores Para as Ocorrências de Registros
+       // Definindo os Valores Para as Ocorrencias de Registros
        
        Integer occur_operacaoCostura; 
        Integer occur_maquinaInventario;
@@ -108,7 +108,7 @@
                                                 occur_maquinaInventario,
                                                 occur_aparelhoInventario );
        
-       // Recuperando 2 Ocorrências de Máquina Operacional
+       // Recuperando 2 Ocorrencias de Maquina Operacional
        
        List<Maquina_Operacional__c> maqOperacionais  = [ SELECT Id,
                                                                 Operacao_Costura__c,
@@ -117,11 +117,11 @@
                                                          FROM   Maquina_Operacional__c 
                                                          LIMIT 2 ];  
        
-       // Definindo a Ocorrência da Máquina Operacional Com Duplicidade
+       // Definindo a Ocorrencia da Maquina Operacional Com Duplicidade
        
        Maquina_Operacional__c dupMaqOper =  new Maquina_Operacional__c();
        
-       // Alterando Operação Costura e Máquina Inventário Provocando Duplicidade 
+       // Alterando Operacao Costura e Maquina Inventario Provocando Duplicidade 
 
        dupMaqOper                        = maqOperacionais[1];
        dupMaqOper.Maquina_Inventario__c  = maqOperacionais[0].Maquina_Inventario__c;
@@ -129,8 +129,8 @@
        
        // Msgs Erro Esperada e Retornada
        
-       String msgEsperada  = 'Configuração Máquina Operacional Já Existente. ' +
-                             'Alteração Não Permitida.';
+       String msgEsperada  = 'Configuracao Maquina Operacional Ja Existente. ' +
+                             'Alteracao Nao Permitida.';
        String msgRetornada = '';
        
        try {
